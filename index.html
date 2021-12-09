@@ -19,39 +19,41 @@
 
         .img {
             background-image: url(./pexels-pixabay-41949.jpg);
-            background-size: cover;
-            height: 500px;
+            /* background-size: cover; */
+            height: 800px;
+            width: 1100px;
 
         }
 
-        .input {
-            margin-left: 350px;
-        }
+        /* .input {
+            margin-left: 300px;
+        } */
 
         .btn {
             margin-top: 200px;
+    
+         
 
         }
+       
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="img col-4 w-100">
+    <div class="container ">
+        <div class="img ">
             <div class="input row mt-5 ">
-                <div class="btn col-4 ">
-                    <input type="text" name="" id="cny_name" placeholder="Enter country name" class="form-control">
-                </div>
-                <div class="btn col-4">
-
-                    <button class="butt btn-success rounded w-50" onclick="getData()"> Get Details</button>
+                <div class="btn col-lg-3 col-md-4 col-12">
+                    <input type="text" name="" id="cny_name" style="width:18rem" placeholder="Enter country name"
+                        class="form-control">
+                    <button class="butt btn-success rounded " onclick="getData()"> Get Details</button>
                 </div>
             </div>
-        </div>
-        <div id="result">
 
-        </div>
-    </div>
+            <div id="result">
+
+            </div>
+
 
 </body>
 <script>
@@ -70,7 +72,7 @@
         let currency = country_data[0].currencies[0].name
         let currency_symbol = country_data[0].currencies[0].symbol
         let flag = country_data[0].flag
-        let html_data = `<div class="container card" style="width: 20rem;">
+        let html_data = `<div class="card" style="width: 20rem; margin-left:600px">
             <img src="${flag}" class="card-img-top" alt="...">
             <div class ="card-body">
             <h5 class ="card-title">${country_name}</h5>
@@ -85,4 +87,7 @@
         document.querySelector('#result').innerHTML = html_data
     }
 </script>
+</div>
+<div>
+
 </html>
